@@ -92,13 +92,21 @@ Body text here...
 | What to Bring & Wear | `:athletic_shoe:` |
 | Register / Health Forms | `:clipboard:` |
 | Commitment Contracts | `:memo:` |
+| All Forms Due (general forms section) | `:memo:` |
 | Absence Request Form (ARF) | `:calendar:` |
 | Uniform Measurement Night | `:shirt:` |
 | Financial Aid | `:money_with_wings:` |
 | Mega Raffle | `:ticket:` |
 | Band Camp Parent Volunteers | `:raised_hands:` |
 | June Camp Day | `:sunny:` |
-| All Forms Due | `:pencil:` |
+| Band Camp Handbook | `:books:` |
+
+### Standing URLs
+
+| Resource | URL |
+|---|---|
+| Forms page | `http://irondalebands.org/forms.html` (use instead of homepage when linking to forms) |
+| Calendar | `https://www.irondalebands.org/calendar.html` (linked from "Important Dates" label) |
 
 ---
 
@@ -199,3 +207,59 @@ Uses **Slack mrkdwn**:
 - Use spacer sections (`{"type": "section", "text": {"type": "mrkdwn", "text": " "}}`) between major sections
 - Keep one divider only — after the subtitle and before content
 - Do NOT add blank image placeholders to force consistent width (looks bad in dark mode)
+
+---
+
+# Instep (Performance Day) Posts
+
+Insteps are performance-day rundowns, distinct from weekly updates. They follow the same general Slack formatting conventions above but with Instep-specific rules.
+
+## Instep Sections & Emojis
+
+| Section | Emoji |
+|---|---|
+| Quick Details | `:pushpin:` |
+| Schedule | `:clock9:` |
+| Parent Info | `:car:` |
+| Pick-Up Location | `:round_pushpin:` |
+
+## Schedule Formatting
+
+**Sequential events at the same time — use semicolons, not sub-items:**
+When multiple things happen sequentially starting at the same time, consolidate into a single bullet separated by semicolons.
+
+```
+• 11:00 am — End Time; Eat Lunch; Bus to next location
+```
+
+NOT three separate lines without times.
+
+**Don't double-signal uncertainty:**
+If a description word already conveys approximation (e.g., "Tentative"), drop redundant markers like "~" or "-ish."
+
+```
+• 12:00 pm — Tentative Performance Time
+```
+
+NOT `~12:00 pm`.
+
+## Links in Insteps
+
+Provide links neutrally — never single out who might need them. Don't frame supplementary links (parade route, maps, etc.) as being for "rookie parents" or "first-timers."
+
+```
+Here's the **[parade route](URL)**.
+```
+
+NOT "Check the parade route if this is your first year."
+
+## Sign-Off
+
+Use the name as the author wrote it in the source document. If the Instep is signed "Dr. Longabaugh," use "Dr. Longabaugh" — not "Dr. L." No em dash before the name.
+
+The "Dr. L" shorthand applies to weekly update body text where Derek is paraphrasing, not to direct sign-offs on authored Instep documents.
+
+```
+Thank you!
+Dr. Longabaugh
+```
