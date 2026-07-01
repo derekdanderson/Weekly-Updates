@@ -106,7 +106,8 @@ Body text here...
 | Resource | URL |
 |---|---|
 | Forms page | `http://irondalebands.org/forms.html` (use instead of homepage when linking to forms) |
-| Calendar | `https://www.irondalebands.org/calendar.html` (linked from "Important Dates" label) |
+| Google Calendar (embedded) | `https://www.irondalebands.org/calendar.html` — link from "Important Dates" label and any reference to "the Google Calendar" |
+| One-Page Calendar (printable) | `https://docs.google.com/document/d/1B9f32KEW2Y-brFYof47dDMmWk8zuCGnP/edit` — link when update references the "One-Page Calendar" (e.g. date changes, schedule updates) |
 
 ---
 
