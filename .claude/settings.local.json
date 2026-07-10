@@ -5,7 +5,14 @@
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); mcp = {k:v for k,v in d.items\\(\\) if 'mcp' in k.lower\\(\\) or 'claude' in k.lower\\(\\)}; print\\(json.dumps\\(mcp, indent=2\\)\\)\")",
       "mcp__1a8eaf76-7938-4184-ab48-8f253d93a556__slack_read_channel",
       "mcp__1a8eaf76-7938-4184-ab48-8f253d93a556__slack_search_public_and_private",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -m pip install --break-system-packages --quiet pymupdf)",
+      "mcp__1a8eaf76-7938-4184-ab48-8f253d93a556__slack_send_message_draft",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/da6656dd-c1f1-40a1-b658-9f2b8b131af9/scratchpad/send_july8_update.py\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -X POST https://slack.com/api/auth.test -H \"Authorization: Bearer xoxb-1993819124755-11125079672035-Lt3TBaxkZ7Zhh2ezVNJyLxDn\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('send_update.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(python3 send_update.py)"
     ]
   }
 }

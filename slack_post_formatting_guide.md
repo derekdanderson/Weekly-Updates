@@ -2,10 +2,10 @@
 
 ## Overview
 
-This guide covers formatting rules for converting the Irondale Marching Knights weekly update PDF into a Slack post. Two delivery methods are supported:
+This guide covers formatting rules for converting the Irondale Marching Knights weekly update PDF into a Slack post. Two delivery methods are supported, both using formatted text (not Block Kit):
 
 - **MCP tool** (`slack_send_message`) — uses standard markdown
-- **Block Kit** (direct API via Python/curl) — uses Slack mrkdwn and JSON block structure
+- **Direct API** (Python/curl via `send_update.py`, posts as Knight Bot) — uses Slack mrkdwn, sent as a single `text` string
 
 ---
 
@@ -48,9 +48,11 @@ Weekly Update – [Date]  ← linked to PDF URL
 **[Weekly Update – May 20, 2026](PDF_URL)**
 ```
 
-**Block Kit:**
-- `header` block with `plain_text`: `:ihsmk_knight: IRONDALE MARCHING KNIGHTS :ihsmk_knight:` (`"emoji": true`)
-- `section` block below it with mrkdwn link to the PDF
+**Direct API (Knight Bot) syntax:**
+```
+:ihsmk_knight: *IRONDALE MARCHING KNIGHTS* :ihsmk_knight:
+*<PDF_URL|Weekly Update – May 20, 2026>*
+```
 
 ---
 
@@ -81,7 +83,11 @@ Emoji + bold header on its own line, body content on the next line.
 Body text here...
 ```
 
-**Block Kit:** Use `header` blocks (not bold mrkdwn) for section titles. Prefix with emoji. `plain_text` with `"emoji": true`.
+**Direct API (Knight Bot) syntax:** same structure, Slack mrkdwn bold:
+```
+:mega: *PARENT VOLUNTEERS FOR SPONSORSHIP DAY:*
+Body text here...
+```
 
 ### Emoji Mapping
 
@@ -136,9 +142,7 @@ For dense sections with a distinct callout or warning, put it on its own line wi
 
 **MCP syntax:** `**[link text](URL)**`
 
-**Block Kit:** Attach each key document link as a `button` in the `"accessory"` field of a `section` block. Button text should be short and action-oriented (e.g. "Submit Health Form", "View Calendar"). Never put link buttons inside `actions` blocks — they are not clickable there.
-
-For sections with multiple key links, create a separate `section` + `accessory` block per link button. Sections with no meaningful link get no accessory.
+**Direct API (Knight Bot) syntax:** `*<URL|link text>*`
 
 ---
 
@@ -194,8 +198,8 @@ Uses **standard markdown** — not Slack mrkdwn:
 
 ⚠️ Do NOT use single `*text*` — it renders as italic, not bold.
 
-### Direct API / Block Kit (Python or curl)
-Uses **Slack mrkdwn**:
+### Direct API (Python/curl, `send_update.py`, posts as Knight Bot)
+Uses **Slack mrkdwn**, sent as a single `text` string via `chat.postMessage` (no Block Kit):
 
 | Effect | Syntax |
 |---|---|
@@ -203,11 +207,7 @@ Uses **Slack mrkdwn**:
 | Italic | `_text_` |
 | Link | `<URL\|text>` |
 
-### Block Kit Layout Rules
-- Use `rich_text` blocks for structured lists (Important Dates, bullet lists) — supports proper bold and `rich_text_list` with `"style": "bullet"`
-- Use spacer sections (`{"type": "section", "text": {"type": "mrkdwn", "text": " "}}`) between major sections
-- Keep one divider only — after the subtitle and before content
-- Do NOT add blank image placeholders to force consistent width (looks bad in dark mode)
+Sections separate with a blank line (`\n\n`) between them, matching the layout used by the MCP tool's posts.
 
 ---
 
