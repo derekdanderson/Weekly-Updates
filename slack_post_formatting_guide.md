@@ -4,12 +4,9 @@
 
 This guide covers formatting rules for converting the Irondale Marching Knights weekly update — published as a PDF at irondalebands.org, and archived as Markdown at `updates/YYYY-MM-DD.md` in the derekdanderson/Weekly-Updates repo — into a Slack post.
 
-There is one delivery method: a single DM to Derek via the `slack_send_message` MCP tool, containing **two versions of the same post**:
+There is one delivery method: a single DM to Derek via the `slack_send_message` MCP tool, written in standard markdown (`**bold**`). Slack copy/paste preserves formatting within Slack, so Derek copies the rendered DM directly and pastes it into the Announcements channel — no separate mrkdwn version or code block is needed.
 
-1. A **rendered preview**, using standard markdown (`**bold**`), so it displays properly right in the DM for Derek to proofread
-2. A **copy-paste block**, fenced in a code block (` ``` `) and written in real Slack mrkdwn (`*bold*`, `<url|text>` links) — code blocks pass through untouched by markdown parsing, so this is exactly what Slack's compose box needs when Derek pastes it into the Announcements channel by hand
-
-Derek reviews the preview, copies the code-block version, and posts it to the real channel himself. There is no automated posting step and no separate script — `send_update.py` has been removed.
+There is no automated posting step and no script — `send_update.py` has been removed.
 
 ---
 
@@ -18,13 +15,11 @@ Derek reviews the preview, copies the code-block version, and posts it to the re
 - Happens every Wednesday (scheduled task "Irondale weekly update check" runs hourly on Wednesdays)
 - Fetch the newest weekly update PDF from irondalebands.org and use WebFetch/the pdf skill to extract content and hyperlinks
 - No local download needed — the scheduled task runs fully remotely. Dedupe and archival live in the derekdanderson/Weekly-Updates GitHub repo (`updates/YYYY-MM-DD.md`, Markdown)
-- Build both versions of the post (preview + mrkdwn copy-paste block, see Overview) and send them together in one DM to Derek (user ID: `U03FHQD6MBN`, channel: `D03FFDGPD6W`) — he reviews and posts to the real channel himself
+- Build the post (see Post Structure below) and send it in one DM to Derek (user ID: `U03FHQD6MBN`, channel: `D03FFDGPD6W`) — he reviews it and copy/pastes it into the real channel himself
 
 ---
 
 ## Post Structure
-
-Same structure for both the preview and the copy-paste block:
 
 ```
 [Header]
@@ -48,16 +43,10 @@ Weekly Update – [Date]  ← linked to PDF URL
 - `:ihsmk_knight:` emoji flanks the org name only — not the subtitle
 - The "Weekly Update – [Date]" line links to the original PDF on irondalebands.org (the public source)
 
-**Preview (standard markdown):**
+**Syntax:**
 ```
 :ihsmk_knight: **IRONDALE MARCHING KNIGHTS** :ihsmk_knight:
 **[Weekly Update – May 20, 2026](PDF_URL)**
-```
-
-**Copy-paste block (Slack mrkdwn):**
-```
-:ihsmk_knight: *IRONDALE MARCHING KNIGHTS* :ihsmk_knight:
-*<PDF_URL|Weekly Update – May 20, 2026>*
 ```
 
 ---
@@ -66,7 +55,7 @@ Weekly Update – [Date]  ← linked to PDF URL
 
 Always placed directly under the header, before the first section. The label links to the Irondale Bands calendar.
 
-**Preview syntax:**
+**Syntax:**
 ```
 **[Important Dates](https://www.irondalebands.org/calendar.html):**
 • **Thursday, May 21** — Uniform Measurement Night (5:30–7:00pm)
@@ -83,15 +72,9 @@ Always placed directly under the header, before the first section. The label lin
 
 Emoji + bold header on its own line, body content on the next line.
 
-**Preview syntax:**
+**Syntax:**
 ```
 :mega: **PARENT VOLUNTEERS FOR SPONSORSHIP DAY:**
-Body text here...
-```
-
-**Copy-paste block (Slack mrkdwn):** same structure, single-asterisk bold:
-```
-:mega: *PARENT VOLUNTEERS FOR SPONSORSHIP DAY:*
 Body text here...
 ```
 
@@ -129,10 +112,10 @@ Body text here...
 |---|---|
 | Key sentences, deadlines, important notes | _italics_ |
 | Strong plain-language warnings | PLAIN ALL CAPS (no markdown) |
-| Key dates/deadlines inline in body text | bold |
+| Key dates/deadlines inline in body text | **bold** |
 | Bold all caps | ❌ Do not use |
 
-**Examples (preview / standard markdown shown; copy-paste block uses single `*`):**
+**Examples:**
 - `_Wear athletic clothes and close-toed athletic shoes._`
 - `_Uniform Measurement Night is scheduled for **Thursday, May 21st from 5:30–7:00pm** at Irondale High School._`
 - `YOU DO NOT NEED TO INCLUDE SPRING TRAINING CONFLICTS`
@@ -146,9 +129,7 @@ For dense sections with a distinct callout or warning, put it on its own line wi
 - Always bold linked text
 - Use descriptive link text — never generic "HERE"
 
-**Preview syntax:** `**[link text](URL)**`
-
-**Copy-paste block (Slack mrkdwn) syntax:** `*<URL|link text>*`
+**Syntax:** `**[link text](URL)**`
 
 ---
 
@@ -162,9 +143,7 @@ For dense sections with a distinct callout or warning, put it on its own line wi
   - "let me know" → "let Dr. L know"
 - When the update asks readers to email Dr. L, always include his address as a clickable link:
 
-**Preview syntax:** `[cameron.longabaugh@moundsviewschools.org](mailto:cameron.longabaugh@moundsviewschools.org)`
-
-**Copy-paste block (Slack mrkdwn) syntax:** `<mailto:cameron.longabaugh@moundsviewschools.org|cameron.longabaugh@moundsviewschools.org>`
+**Syntax:** `[cameron.longabaugh@moundsviewschools.org](mailto:cameron.longabaugh@moundsviewschools.org)`
 
 ---
 
@@ -180,7 +159,6 @@ For dense sections with a distinct callout or warning, put it on its own line wi
 
 Add an "Upcoming Rehearsals & Events" section at the end of the post:
 
-**Preview syntax:**
 ```
 **Upcoming Rehearsals & Events:**
 • _Thursday, May 22, 6–9pm_
@@ -194,7 +172,7 @@ Add an "Upcoming Rehearsals & Events" section at the end of the post:
 
 ## Syntax Reference
 
-### Preview (rendered in the DM) — standard markdown
+Standard markdown, rendered by the `slack_send_message` MCP tool:
 
 | Effect | Syntax |
 |---|---|
@@ -204,23 +182,15 @@ Add an "Upcoming Rehearsals & Events" section at the end of the post:
 | Regular link | `[text](URL)` |
 | Email link | `[email@domain.com](mailto:email@domain.com)` |
 
-### Copy-paste block (for pasting into Announcements) — Slack mrkdwn, inside a fenced code block
+⚠️ Do NOT use single `*text*` — it renders as italic, not bold.
 
-| Effect | Syntax |
-|---|---|
-| Bold | `*text*` |
-| Italic | `_text_` |
-| Link | `<URL\|text>` |
-
-⚠️ Never mix these: single `*text*` in the preview renders as italic, not bold — and double `**text**` inside the mrkdwn copy-paste block will show literal asterisks once pasted into Slack's composer.
-
-Sections separate with a blank line between them in both versions.
+Sections separate with a blank line between them.
 
 ---
 
 # Instep (Performance Day) Posts
 
-Insteps are performance-day rundowns, distinct from weekly updates. They follow the same general Slack formatting conventions above (preview + mrkdwn copy-paste block) but with Instep-specific rules.
+Insteps are performance-day rundowns, distinct from weekly updates. They follow the same general Slack formatting conventions above but with Instep-specific rules.
 
 ## Instep Sections & Emojis
 
