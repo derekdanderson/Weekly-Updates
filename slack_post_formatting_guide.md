@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers formatting rules for converting the Irondale Marching Knights weekly update PDF into a Slack post. Two delivery methods are supported, both using formatted text (not Block Kit):
+This guide covers formatting rules for converting the Irondale Marching Knights weekly update — published as a PDF at irondalebands.org, and archived as Markdown at `updates/YYYY-MM-DD.md` in the derekdanderson/Weekly-Updates repo — into a Slack post. Two delivery methods are supported, both using formatted text (not Block Kit):
 
 - **MCP tool** (`slack_send_message`) — uses standard markdown
 - **Direct API** (Python/curl via `send_update.py`, posts as Knight Bot) — uses Slack mrkdwn, sent as a single `text` string
@@ -11,9 +11,9 @@ This guide covers formatting rules for converting the Irondale Marching Knights 
 
 ## Workflow
 
-- Happens every Wednesday
-- When a public PDF URL is shared, use WebFetch to extract content and hyperlinks automatically
-- Download the PDF locally to `/Users/derekanderson/Documents/Band Boosters/Weekly Updates/` if not already there (use curl)
+- Happens every Wednesday (scheduled task "Irondale weekly update check" runs hourly on Wednesdays)
+- Fetch the newest weekly update PDF from irondalebands.org and use WebFetch/the pdf skill to extract content and hyperlinks
+- No local download needed — the scheduled task runs fully remotely. Dedupe and archival now live in the derekdanderson/Weekly-Updates GitHub repo (`updates/YYYY-MM-DD.md`, Markdown, not PDF) rather than a local folder or a committed PDF
 - Send the draft to Derek's DM (user ID: `U03FHQD6MBN`, channel: `D03FFDGPD6W`) — he handles posting to the real channel
 
 ---
@@ -40,7 +40,7 @@ Weekly Update – [Date]  ← linked to PDF URL
 ```
 
 - `:ihsmk_knight:` emoji flanks the org name only — not the subtitle
-- The "Weekly Update – [Date]" line links to the PDF itself
+- The "Weekly Update – [Date]" line links to the original PDF on irondalebands.org (the public source), not the repo's Markdown archive
 
 **MCP syntax:**
 ```
