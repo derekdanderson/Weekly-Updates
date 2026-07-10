@@ -6,10 +6,13 @@ Archive of IHSMK weekly updates and event insteps, converted to Markdown for eas
 
 - `updates/` — Weekly updates, one file per issue, named `YYYY-MM-DD.md` (sorted chronologically)
 - `insteps/` — Performance itineraries ("Insteps") for the season
-- `send_update.py` — Posts a formatted summary of the current weekly update to Slack
-- `slack_post_formatting_guide.md` — Formatting conventions for the Slack posts
+- `slack_post_formatting_guide.md` — Formatting conventions for the weekly Slack DM (rendered preview + Slack-mrkdwn copy-paste block)
 - `IHSMK_header.png` — Band header image
 
 ## Conventions
 
 All documents are Markdown (`.md`), not PDF. Source PDFs are published on [irondalebands.org](https://www.irondalebands.org) and can be re-downloaded from there if the original fixed-layout versions are needed. Hyperlinks from the original PDFs are preserved inline.
+
+## Automation
+
+A scheduled task ("Irondale weekly update check") runs hourly on Wednesdays. It checks irondalebands.org for a new weekly update, converts it to Markdown, commits it to `updates/`, and DMs Derek a draft (rendered preview + a Slack-mrkdwn copy-paste block). Derek reviews the draft and posts it to the real Announcements channel by hand — there is no automated posting step.
