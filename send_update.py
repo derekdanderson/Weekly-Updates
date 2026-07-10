@@ -1,3 +1,18 @@
+"""
+Manual "publish to the real channel" step for the IHSMK weekly update.
+
+The scheduled task ("Irondale weekly update check") checks irondalebands.org
+weekly, converts any new update to Markdown, and commits it to
+derekdanderson/Weekly-Updates/updates/YYYY-MM-DD.md (this file is the
+dedupe source of truth for that task — not this script and not a PDF).
+It then DMs Derek a formatted draft.
+
+This script is separate: Derek reviews the DM draft, updates CHANNEL/TEXT
+below to match, and runs this script to post to the real public channel
+(it does not read from the repo automatically). See
+slack_post_formatting_guide.md for the formatting rules the draft and this
+script's TEXT should both follow.
+"""
 import json, os, urllib.request
 
 if "SLACK_BOT_TOKEN" not in os.environ:
