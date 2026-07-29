@@ -103,6 +103,11 @@ Body text here...
 | Forms page | `http://irondalebands.org/forms.html` (use instead of homepage when linking to forms) |
 | Google Calendar (embedded) | `https://www.irondalebands.org/calendar.html` — link from "Important Dates" label and any reference to "the Google Calendar" |
 | One-Page Calendar (printable) | `https://docs.google.com/document/d/1B9f32KEW2Y-brFYof47dDMmWk8zuCGnP/edit` — link when update references the "One-Page Calendar" (e.g. date changes, schedule updates) |
+| Generic "our website" reference | `https://www.irondalebands.org` |
+| Weekly update posted/updated "on our website" | `https://www.irondalebands.org/weekly-updates.html` |
+| Instep posted/updated "on our website" | `https://www.irondalebands.org/insteps.html` |
+
+Match the link to what the sentence is actually about — a generic mention gets the homepage, but "the [weekly update/instep] has been posted on our website" gets the specific page, not the homepage.
 
 ---
 
@@ -130,6 +135,21 @@ For dense sections with a distinct callout or warning, put it on its own line wi
 - Use descriptive link text — never generic "HERE"
 
 **Syntax:** `**[link text](URL)**`
+
+---
+
+## Slack Channel & People References
+
+- "Join the [x] channel in Slack" → look up the channel with `slack_search_channels` and link it as a real Slack channel mention, not plain text or an external URL:
+
+**Syntax:** `<#CHANNELID|channel-name>` (e.g. `<#C05HXB0JWAU|first-aid>`)
+
+- "Contact [Name] via Slack" → look up the person with `slack_search_users` and replace their name with a clickable @-mention, keeping "via Slack" in the sentence:
+
+**Syntax:** `<@USERID>` (e.g. "contact `<@U08R4JJ2H60>` via Slack")
+
+- Correct obvious name typos found during lookup (e.g. PDF's "Mellissa" → Slack profile's "Melissa") — same principle as other typo corrections
+- When the update says "email Dr. L," always append his linked email address even in sections that don't otherwise mention email — don't assume it's already covered elsewhere in the post
 
 ---
 
