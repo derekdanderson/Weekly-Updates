@@ -3,7 +3,15 @@
     "allow": [
       "mcp__claude_ai_Slack__slack_search_channels",
       "mcp__claude_ai_Slack__slack_search_users",
-      "mcp__claude_ai_Slack__slack_search_public"
+      "mcp__claude_ai_Slack__slack_search_public",
+      "Bash(git -C '/Users/derekanderson/Documents/Band Boosters/Weekly Updates' commit -m ' *)",
+      "Bash(curl -s \"https://www.irondalebands.org/insteps.html\")",
+      "Bash(curl -sL \"https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_1_-_stockyard_days_2026.pdf\" -o \"/Users/derekanderson/Documents/Band Boosters/Weekly Updates/Instep PDFs/instep_1_-_stockyard_days_2026.pdf\")",
+      "Bash(curl -sL \"https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_2_-_mounds_view_parade_2026.pdf\" -o \"/Users/derekanderson/Documents/Band Boosters/Weekly Updates/Instep PDFs/instep_2_-_mounds_view_parade_2026.pdf\")",
+      "Bash(file \"/Users/derekanderson/Documents/Band Boosters/Weekly Updates/Instep PDFs/\"*.pdf)",
+      "Bash(curl -sL \"https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_2_-_mounds_view_parade_2026.pdf\" -o /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/instep2.pdf)",
+      "Bash(python3 -c ' *)",
+      "Bash(base64 -i /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/img_1.jpeg -o /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/img_1_b64.txt)"
     ]
   }
 }
