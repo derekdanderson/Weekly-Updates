@@ -212,6 +212,10 @@ Sections separate with a blank line between them.
 
 Insteps are performance-day rundowns, distinct from weekly updates. They follow the same general Slack formatting conventions above but with Instep-specific rules.
 
+## Intro Paragraph
+
+Carry the source PDF's descriptive paragraph about the event (e.g. what Stockyard Days or the Mounds View Festival is) into the post as-is, right after the header/title line and before Quick Details. Don't skip it — it's the only context new parents get for an event they may not know.
+
 ## Instep Sections & Emojis
 
 | Section | Emoji |
@@ -250,6 +254,23 @@ Here's the **[parade route](URL)**.
 ```
 
 NOT "Check the parade route if this is your first year."
+
+**Addresses → clickable Google Maps links:**
+Any street address (report locations, drop-off/pick-up points) should link to a Google Maps search.
+
+```
+https://www.google.com/maps/search/?api=1&query=<url-encoded address>
+```
+(spaces → `+`, commas → `%2C`). Wrap the location name in the link text and keep the plain address after it for reference, e.g.:
+```
+**[Long Lake Regional Park](https://www.google.com/maps/search/?api=1&query=1500+Old+Hwy+8%2C+New+Brighton%2C+MN+55112)** (1500 Old Hwy 8, New Brighton, MN 55112)
+```
+
+**Body images (e.g. a parade route map):**
+The Slack MCP tool has no file/image upload capability — don't try to extract and host the image separately. Just link the relevant section to the source PDF, same as any other PDF reference:
+```
+Here's the **[parade route](PDF_URL)** if you'd like to find a good spot to watch.
+```
 
 ## Sign-Off
 

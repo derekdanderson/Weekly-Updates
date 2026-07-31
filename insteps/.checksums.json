@@ -1,0 +1,12 @@
+{
+  "stockyard-days": {
+    "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_1_-_stockyard_days_2026.pdf",
+    "sha256": "95f7d7cdbdf3df06393ac4f489374c992e4d0452ea71f25065f8251103a6140d",
+    "last_checked": "2026-07-30"
+  },
+  "mounds-view-parade": {
+    "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_2_-_mounds_view_parade_2026.pdf",
+    "sha256": "4e5ff7587d7e97f78dafee3f342306058f08656f7b7d4e0877926a9adad3a0b9",
+    "last_checked": "2026-07-30"
+  }
+}

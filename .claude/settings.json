@@ -11,7 +11,12 @@
       "Bash(file \"/Users/derekanderson/Documents/Band Boosters/Weekly Updates/Instep PDFs/\"*.pdf)",
       "Bash(curl -sL \"https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_2_-_mounds_view_parade_2026.pdf\" -o /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/instep2.pdf)",
       "Bash(python3 -c ' *)",
-      "Bash(base64 -i /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/img_1.jpeg -o /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/img_1_b64.txt)"
+      "Bash(base64 -i /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/img_1.jpeg -o /private/tmp/claude-501/-Users-derekanderson-Documents-Band-Boosters-Weekly-Updates/f208d6f2-1a92-46fd-9a58-d8fc09971054/scratchpad/img_1_b64.txt)",
+      "Bash(shasum -a 256)",
+      "Bash(curl -sL \"https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_1_-_stockyard_days_2026.pdf\" -o /tmp/i1.pdf)",
+      "Bash(curl -sL \"https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_2_-_mounds_view_parade_2026.pdf\" -o /tmp/i2.pdf)",
+      "Bash(shasum -a 256 /tmp/i1.pdf /tmp/i2.pdf)",
+      "Bash(rm /tmp/i1.pdf /tmp/i2.pdf)"
     ]
   }
 }
