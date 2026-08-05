@@ -212,6 +212,15 @@ Sections separate with a blank line between them.
 
 Insteps are performance-day rundowns, distinct from weekly updates. They follow the same general Slack formatting conventions above but with Instep-specific rules.
 
+## Header
+
+Every instep DM — new or revised, and regardless of how many insteps are sent in a run — starts with the same knight-flanked header used on weekly updates, on its own line before the instep title:
+
+```
+:ihsmk_knight: **IRONDALE MARCHING KNIGHTS** :ihsmk_knight:
+**[Instep #1 – Stockyard Days Parade](PDF_URL)** — _New_
+```
+
 ## Intro Paragraph
 
 Carry the source PDF's descriptive paragraph about the event (e.g. what Stockyard Days or the Mounds View Festival is) into the post as-is, right after the header/title line and before Quick Details. Don't skip it — it's the only context new parents get for an event they may not know.
