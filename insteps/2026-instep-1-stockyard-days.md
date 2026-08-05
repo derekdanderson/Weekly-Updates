@@ -8,7 +8,7 @@ Stockyard Days is an annual multi-day festival celebrating the spirited history 
 
 - **When:** Saturday, August 8, 2026
 - **Report:** 7:50 am at Irondale
-- **Attire:** Irondale Show Shirt, Black Shorts, Athletic Shoes/Socks
+- **Attire:** Black Shirt, Black Shorts, Athletic Shoes/Socks
 - **What to Bring:** Instrument (leave cases in your car) or Flag/Rifle only
 
 ## Schedule Overview
