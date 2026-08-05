@@ -1,21 +1,25 @@
 {
   "stockyard-days": {
     "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_1_-_stockyard_days_2026.pdf",
+    "etag": "6256c13c8f5b6a0720910b10b0d16944",
     "sha256": "951afd61b92a149ffd2100d13f7d2b19f739452bc99e95adca55de719886bcc5",
     "last_checked": "2026-08-05"
   },
   "mounds-view-parade": {
     "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_2_-_mounds_view_parade_2026.pdf",
+    "etag": "bf2167c756085a7a31fa5f439501a179",
     "sha256": "4e5ff7587d7e97f78dafee3f342306058f08656f7b7d4e0877926a9adad3a0b9",
     "last_checked": "2026-08-05"
   },
   "state-fair-parade": {
     "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_3_-_state_fair_parade_2026.pdf",
+    "etag": "935969a7ec710cc2950561a05f93026a",
     "sha256": "34368d91707cf3c8fe632b748fb917aedfaa571ad047c83bd63a5704b557b6af",
     "last_checked": "2026-08-05"
   },
   "eastview-marching-festival": {
     "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/instep_4_-_eastview_marching_festival_2026.pdf",
+    "etag": "d8471253d09aacdeaa6e8b0c7c343965",
     "sha256": "6e4342bd06a36e6d796bef0acdb220b4895291a3b132f01171358cfdaea458d4",
     "last_checked": "2026-08-05"
   }
