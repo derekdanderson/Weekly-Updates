@@ -16,6 +16,7 @@ There is no automated posting step and no script — `send_update.py` has been r
 - Fetch the newest weekly update PDF from irondalebands.org and use WebFetch/the pdf skill to extract content and hyperlinks
 - No local download needed — the scheduled task runs fully remotely. Dedupe and archival live in the derekdanderson/Weekly-Updates GitHub repo (`updates/YYYY-MM-DD.md`, Markdown)
 - Build the post (see Post Structure below) and send it in one DM to Derek (user ID: `U03FHQD6MBN`, channel: `D03FFDGPD6W`) — he reviews it and copy/pastes it into the real channel himself
+- Do not append a "Sent using Claude" (or similar) sign-off line to the message — the `slack_send_message` tool/API already adds this automatically. Adding one manually causes it to appear twice.
 
 ---
 
