@@ -19,6 +19,10 @@ A scheduled task ("Irondale weekly update check") runs hourly on Wednesdays. It 
 
 A separate scheduled task checks irondalebands.org for new or revised Insteps (see below).
 
+### Branch workflow
+
+Each run works on a session-scoped branch (auto-assigned by the Claude Code on the web harness — this can't be turned off from within a session) and fast-forward-merges it into `main` after committing. Do not have the task try to delete the working branch afterward: this environment's egress proxy hard-blocks `DELETE` requests to `git/refs` (confirmed via a direct GitHub API call — `403 "Write access to this GitHub API path is not permitted through this proxy"`, not a GitHub permissions or branch-protection issue), so a delete step just fails every run. Merged branches are harmless left in place; clean them up in bulk from GitHub's UI occasionally instead.
+
 ### Scraping the listing pages — don't use WebFetch
 
 Both `insteps.html` and `weekly-updates.html` are plain listing pages with PDF `<a href>` links. `WebFetch`'s summarization step has been observed fabricating a link (returned a `zeffy.com` domain that appears nowhere in the actual HTML). Since these links determine what gets downloaded and committed, always get them directly instead:
