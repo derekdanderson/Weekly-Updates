@@ -28,5 +28,11 @@
     "etag": "4cef860c8c7b56d7667fb76514a3e209",
     "sha256": "bab3b226b9168af301002c59d1824cef59e3c901df8f79f34d9fd0be99e051ab",
     "last_checked": "2026-09-02"
+  },
+  "2026-09-09": {
+    "source_url": "https://www.irondalebands.org/uploads/4/8/3/5/48357505/weekly_update_9-9-2026.pdf",
+    "etag": "f28485299d4e856dcc7320410f37a75a",
+    "sha256": "a3e0bd1bb179178ae4d23046d62e9433bd0390b19932103b0d88af92d6282c6a",
+    "last_checked": "2026-09-09"
   }
 }
