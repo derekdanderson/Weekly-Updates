@@ -28,9 +28,14 @@
 
 | Time | Activity |
 |------|----------|
-| TBD | Wake-up & breakfast (based on prelims time) |
-| TBD | Load buses & depart for UNI Dome (based on prelims time) |
-| **9:15 – 11:30 am** | **Prelims performance time window** |
+| 6:30 am | Wake-up / breakfast / hair & make-up |
+| 7:30 am | Load buses |
+| 7:45 am | Depart hotel |
+| 8:00 am | Arrive at UNI Dome |
+| 8:55 am | Warm-up |
+| **9:35 am** | **Pit report time** |
+| **9:50 am** | **Band report time** |
+| **10:00 am** | **Prelims performance time** |
 | 12:00 pm | Lunch at hotel (provided by band boosters) |
 | 3:30 pm | Depart for UNI Dome |
 | 4:00 pm | Arrive at UNI Dome |
@@ -46,7 +51,8 @@
 
 | Time | Activity |
 |------|----------|
-| 8:00 am | Wake up / breakfast / load buses |
+| 7:30 am | Wake up / breakfast |
+| 8:30 am | Finish loading buses |
 | 9:00 am | Depart for Irondale H.S. |
 | 12:30 pm | Arrive at Irondale H.S. & unload buses |
 
